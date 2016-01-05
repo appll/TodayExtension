@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-Yf-bBW">
+                                <rect key="frame" x="87" y="132" width="82" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eW1-wA-Geu"/>
+                                    <constraint firstAttribute="width" constant="82" id="yAT-dG-wXU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vrt-FF-VFM">
+                                <rect key="frame" x="192" y="128" width="216" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="bwf-Au-FtF"/>
+                                    <constraint firstAttribute="height" constant="30" id="pm9-ru-G7x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3At-ec-OGy">
+                                <rect key="frame" x="277" y="220" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P5q-us-oiI"/>
+                                    <constraint firstAttribute="width" constant="46" id="qyu-wJ-C5t"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEp-ch-h39"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-Xw-4WE">
+                                <rect key="frame" x="277" y="290" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="3oX-dz-D7i"/>
+                                    <constraint firstAttribute="height" constant="30" id="KnB-WK-bdN"/>
+                                </constraints>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5T4-bk-yZN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vrt-FF-VFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ADJ-jE-eNq"/>
+                            <constraint firstItem="2MF-Xw-4WE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ITY-rE-Yr3"/>
+                            <constraint firstItem="vrt-FF-VFM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="M0u-X0-WM9"/>
+                            <constraint firstItem="2MF-Xw-4WE" firstAttribute="top" secondItem="3At-ec-OGy" secondAttribute="bottom" constant="40" id="OWC-hi-ROb"/>
+                            <constraint firstItem="vrt-FF-VFM" firstAttribute="leading" secondItem="bzb-Yf-bBW" secondAttribute="trailing" constant="23" id="Vxk-Cl-gWU"/>
+                            <constraint firstItem="bzb-Yf-bBW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="112" id="Xjc-0V-SyU"/>
+                            <constraint firstItem="3At-ec-OGy" firstAttribute="top" secondItem="vrt-FF-VFM" secondAttribute="bottom" constant="62" id="nEt-xl-2eR"/>
+                            <constraint firstItem="3At-ec-OGy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ytW-Ro-tzT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="vrt-FF-VFM" id="SMK-tX-fxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="424"/>
+        </scene>
+    </scenes>
+</document>
